@@ -3,7 +3,7 @@
  > scope, hoisting, this, function, closure 등의 동작원리를 담고 있는 자바스크립트의 핵심원리
  > ECMAScript에 따르면 실행 컨텍스트를 실행 가능한 코드를 형상화하고 구분하는 추상적인 개념이라고 정의한다. 즉, 실행 컨텍스트는 실행 가능한 코드가 실행되기 위해 필요한 환경이라 말할 수 있다. 여기서 말하는 실행 가능한 코드는 아래와 같다.
   + 전역 코드 : 전역 영역에 존재하는 코드
-  + Eval 코드 : [eval 함수]()로 실행되는 코드
+  + Eval 코드 : [eval 함수](https://github.com/criminal415/IL/blob/main/nodejs/appendix/Eval.md)로 실행되는 코드
  
 
  #### 컨텍스트 4가지 특징

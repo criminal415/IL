@@ -19,7 +19,7 @@
  (콜백 큐라고 부르기도 한다.)
  콜백함수는 보통 완료된 순서대로 줄을 서 있지만 특정한 경우 순서가 바뀌기도 한다. <br>
 
-[전역 컨텍스트](https://github.com/criminal415/IL/blob/main/nodejs/appendix/global_context.md)
+[컨텍스트](https://github.com/criminal415/IL/blob/main/nodejs/appendix/Execution_Context.md)
 ## 논 블로킹 I/O
 
 > node.js는 기본적으로 single thread, none blocking 모델(java script언어의 특성이기도 하다)을 사용한다.
