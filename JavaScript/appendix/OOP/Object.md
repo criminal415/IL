@@ -138,4 +138,4 @@ console.log(a === b, a === c, b === c); // true true true
 
 원시 타입은 값(value)으로 전달된다. 즉, 값이 복사되어 전달된다. 이를 pass-by-value(값에 의한 전달)라 한다. 원시 타입은 값이 한번 정해지면 변경할 수 없다.(immutable) 또한 이들 값은 런타임(변수 할당 시점)에 메모리의 스택 영역(Stack Segment)에 고정된 메모리 영역을 점유하고 저장된다.
 
-[객체와 변경불가성(Immutability)]()
+[객체와 변경불가성(Immutability)](https://github.com/criminal415/IL/blob/main/JavaScript/appendix/OOP/immutability.md)

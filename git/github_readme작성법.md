@@ -47,3 +47,8 @@ printf("code Block \n");
 
 ## 6. 구분선, 수평선
 ------------
+## 7. 이미지(크기조절)
+```
+<img src="<이미지 주소>" width="" hight="">
+```
+<img src="https://user-images.githubusercontent.com/90595291/144960020-e99ef882-ac3c-4442-a501-e0914a5186f6.png" width="50%" hight="50%">
