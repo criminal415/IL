@@ -16,7 +16,7 @@
    이에 반해 원시 타입은 값(value)으로 전달된다. 즉, 복사되어 전달된다. 이를 pass-by-value라 한다.
 
    
-[Object](https://github.com/criminal415/IL/blob/main/JavaScript/appendix/OOP/Object.js)
+[Object](https://github.com/criminal415/IL/blob/main/JavaScript/appendix/OOP/Object.md)
 
 ## 객체지향 프로그래밍(OOP)
 
