@@ -84,5 +84,43 @@ console.log(user2.name); // Kim
 위의 경우 객체 user2의 name 프로퍼티에 새로운 값을 할당하면 객체는 변경 불가능한 값이 아니므로 객체 user2는 변경된다. 그런데 변경하지도 않은 객체 user1도 동시에 변경된다. 이는 user1과 user2가 같은 어드레스를 참조하고 있기 때문이다.
 
 <img src="https://user-images.githubusercontent.com/90595291/144958405-fe6a47c5-a7dc-4948-9320-d5e8724ac330.png" width="50%" hight="50%">
-
+이것이 의도한 동작이 아니라면 참조를 가지고 있는 다른 장소에 변경 사실을 통지하고 대처하는 추가 대응이 필요하다.
 -------------------------------------------------
+
+### 2. immutable data pattern
+의도하지 않은 객체의 변경이 발생하는 원인의 대다수는 “레퍼런스를 참조한 다른 객체에서 객체를 변경”하기 때문이다. 이 문제의 해결 방법은 비용은 조금 들지만 객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방어적 복사(defensive copy)를 통해 새로운 객체를 생성한 후 변경한다.
+
+ + #### 2.1 Object.assign
+ Object.assign은 타킷 객체로 소스 객체의 프로퍼티를 복사한다. 이때 소스 객체의 프로퍼티와 동일한 프로퍼티를 가진 타켓 객체의 프로퍼티들은 소스 객체의 프로퍼티로 덮어쓰기된다. 리턴값으로 타킷 객체를 반환한다. ES6에서 추가된 메소드이며 Internet Explorer는 지원하지 않는다.
+ ```
+ // Syntax
+Object.assign(target, ...sources)
+ ```
+ ```
+ // Copy
+const obj = { a: 1 };
+const copy = Object.assign({}, obj);
+console.log(copy); // { a: 1 }
+console.log(obj == copy); // false
+
+// Merge
+const o1 = { a: 1 };
+const o2 = { b: 2 };
+const o3 = { c: 3 };
+
+const merge1 = Object.assign(o1, o2, o3);
+
+console.log(merge1); // { a: 1, b: 2, c: 3 }
+console.log(o1);     // { a: 1, b: 2, c: 3 }, 타겟 객체가 변경된다!
+
+// Merge
+const o4 = { a: 1 };
+const o5 = { b: 2 };
+const o6 = { c: 3 };
+
+const merge2 = Object.assign({}, o4, o5, o6);
+
+console.log(merge2); // { a: 1, b: 2, c: 3 }
+console.log(o4);     // { a: 1 }
+ ```
+ Object.assign을 사용하여 기존 객체를 변경하지 않고 객체를 복사하여 사용할 수 있다. Object.assign은 완전한 deep copy를 지원하지 않는다. 객체 내부의 객체(Nested Object)는 Shallow copy된다.

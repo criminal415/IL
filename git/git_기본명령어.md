@@ -25,3 +25,5 @@ git log : 누가 언제 커밋했는지 볼 때!
 
 git push origin master : github에 커밋내용 올릴때 !
 git pull origin master : github의 변경된사항을 local로 가져올 때!
+
+git commit --amend : 가장 마지막에 commit한 내용을 수정할 수 있다.
