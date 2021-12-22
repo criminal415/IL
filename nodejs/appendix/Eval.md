@@ -1,5 +1,5 @@
 
-자바스크립트의 객체는 아래와 같이 크게 3개의 객체로 분류할 수 있다.
+자바스크립트의 객체는 아래와 같이 크게 3개의 객체로 분류할 수 있다.<br>
 <img src="https://user-images.githubusercontent.com/90595291/144785698-b9144a12-fee1-42f5-8e34-06bf55236ebe.png" width="50%" height="50%">
 
 ### 1. 네이티브 객체
