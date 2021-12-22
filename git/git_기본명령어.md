@@ -37,3 +37,6 @@ git push origin master : github에 커밋내용 올릴때 ! <br>
 git pull origin master : github의 변경된사항을 local로 가져올 때! <br>
 
 git commit --amend : 가장 마지막에 commit한 내용을 수정할 수 있다. <br>
+
+git reset --hard Head~<num> : 로컬에서 되돌리고 싶은 커밋을 <num> 만큼 되돌릴 수 있다.
+git push -f origin main : 원격에 강제로 푸쉬하면 원격에 남아있던 commit도 삭제된다.
