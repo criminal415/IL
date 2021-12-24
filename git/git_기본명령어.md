@@ -40,3 +40,5 @@ git commit --amend : 가장 마지막에 commit한 내용을 수정할 수 있�
 
 git reset --hard Head~`num` : 로컬에서 되돌리고 싶은 커밋을 <num> 만큼 되돌릴 수 있다. <br>
 git push -f origin main : 원격에 강제로 푸쉬하면 원격에 남아있던 commit도 삭제된다.
+
+git restore --staged `file_name` : git add 한 것중 file_name을 unstage 할 수 있다. git status로 확인 가능(file_name)
