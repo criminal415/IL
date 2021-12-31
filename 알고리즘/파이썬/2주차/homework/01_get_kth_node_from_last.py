@@ -26,10 +26,32 @@ class LinkedList:
         for i in range(end_length):
             cur = cur.next
         return cur
-
+# 1. LinkedList 길이 전부 알아내기 O(N)
+# 2. 그 길이에서 k 만큼 뺀 길이만큼 이동 O(N - k)
 
 linked_list = LinkedList(6)
 linked_list.append(7)
 linked_list.append(8)
 
 print(linked_list.get_kth_node_from_last(2).data)  # 7이 나와야 합니다!
+
+# 두번째 방법 
+
+# 1. 노드를 두개 잡는다.
+# 2. 한 노드를 다른 노드보다 k 만틈 떨어지게 한다.
+# 3. 그리고 계속 한 칸씩 같이 이동한다.
+# 4. 느린 노드는 끝에서 k 만큼 떨어진 노드가 되므로 바로 반환
+# 빠른 노드 O(N) 느린노드 O(N - k)
+    # def get_kth_node_from_last(self, k):
+    #     slow = self.head
+    #     fast = self.head
+
+    #     for i in range(k):
+    #         fast = fast.next
+
+    #     while fast is not None:
+    #         fast = fast.next
+    #         slow = slow.next
+    #     return slow
+
+# 두방법 모두 시간 복작도의 차이는 없다.
