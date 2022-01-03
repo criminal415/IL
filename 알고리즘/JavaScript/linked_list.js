@@ -58,6 +58,31 @@ class LinkedList {
     node.next = new_node;
     new_node.next = next_node;
   }
+  delete_node(index) {
+    if (index == 0) {
+      this.head = this.head.next;
+      return;
+    }
+    let node = this.get_node(index - 1);
+    node.next = node.next.next;
+  }
+}
+
+function get_linked_list_sum(linked_list1, linked_list2) {
+  sum1 = linked_list_sum(linked_list1);
+  sum2 = linked_list_sum(linked_list2);
+
+  return sum1 + sum2;
+}
+
+function linked_list_sum(linked_list) {
+  let list_sum = 0;
+  head = linked_list.head;
+  while (head) {
+    list_sum = list_sum * 10 + head.data;
+    head = head.next;
+  }
+  return list_sum;
 }
 
 let linked_list = new LinkedList(3);
@@ -66,4 +91,16 @@ linked_list.append(5);
 linked_list.print_all();
 linked_list.add_node(1, 7);
 linked_list.print_all();
+linked_list.delete_node(2);
+linked_list.print_all();
 console.log(linked_list.get_node(0));
+
+let linked_list1 = new LinkedList(6);
+linked_list1.append(7);
+linked_list1.append(8);
+
+let linked_list2 = new LinkedList(3);
+linked_list2.append(5);
+linked_list2.append(4);
+
+console.log(get_linked_list_sum(linked_list1, linked_list2));
