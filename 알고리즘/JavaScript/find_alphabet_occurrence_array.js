@@ -21,7 +21,7 @@ console.log(find_alphabet_occurrence_array('hello my name is sparta'));
 function find_max_occurred_alphabet(string) {
   alphabet_occurrence_array = new Array(26).fill(0);
 
-  for (char of string) {
+  for (let char of string) {
     if (!isAlpha(char)) {
       continue;
     }
