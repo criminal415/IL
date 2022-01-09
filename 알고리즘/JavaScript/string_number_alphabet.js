@@ -12,6 +12,7 @@ function solution(s) {
 
   return parseInt(answer);
 }
+//이유 초기 답안은 만약에, 숫자 문자열이 두개 이상이 포함되어있을때 제일 먼저 나오는것만 탐색하기 때문에 실패!!!
 
 //바꾼 답안
 function solution(s) {
