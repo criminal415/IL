@@ -1,7 +1,5 @@
-const { assert } = require('console');
-
-suite('"About" Page Tests', () => {
-  test('page should contain link to contact page', () => {
+suite('"About" Page Tests', function () {
+  test('page should contain link to contact page', function () {
     assert($('a[href="/contact"').length);
   });
 });

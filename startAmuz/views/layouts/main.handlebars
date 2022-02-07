@@ -1,4 +1,5 @@
-<html lang='en'>
+<!doctype html>
+<html>
   <head>
     <title>Meadowlark Travel</title>
     {{#if showTests}}
@@ -14,7 +15,8 @@
       <script src='/vendor/mocha.js'></script>
       <script src='/vendor/chai.js'></script>
       <script>
-        mocha.ui('tdd'); const assert = chai.assert;
+        const assert = chai.assert;
+        mocha.ui('tdd'); 
       </script>
       <script src='/qa/tests-global.js'></script>
       {{#if pageTestScript}}
