@@ -11,13 +11,19 @@ app
   .engine('handlebars', handlebars.engine)
   .set('view engine', 'handlebars');
 
+app.use((req, res, next) => {
+  res.locals.showTests = app.get('env') !== 'production' && req.query.test === '1';
+  next();
+});
+
 app
   .get('/', (req, res) => {
+    console.log(res.locals.showTests);
     res.render('home');
   })
 
   .get('/about', (req, res) => {
-    res.render('about', { fortune: fortune.getFortune() });
+    res.render('about', { fortune: fortune.getFortune(), pageTestScript: '/qa/tests-about.js' });
   });
 
 app.use((req, res, next) => {
